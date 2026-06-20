@@ -9,7 +9,6 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
@@ -25,14 +24,14 @@ export function UserMenu({ email }: { email?: string }) {
         <User className="size-5" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
-        <DropdownMenuLabel className="font-normal">
+        <div className="px-2 py-1.5">
           <div className="text-muted-foreground text-xs">
             Sessão iniciada como
           </div>
           <div className="text-foreground truncate text-sm font-medium">
             {email ?? "—"}
           </div>
-        </DropdownMenuLabel>
+        </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem render={<Link href="/configuracoes" />}>
           <Settings className="size-4" />
